@@ -1,0 +1,53 @@
+Akeem Hutchinson 
+CSU Global MS AI and Machine Learning 
+CSC500 – Isaac Gang 
+Apr 19, 2026
+
+
+Pseudocode:
+Calculate the total and average rainfall per month over a period of years
+Assign variables
+First loop will ask for number of years(x)
+Secondary loop will iterate the amount of months for number of years
+Within second loop ask for inches of rain fall 
+Calculate total rainfall and cumulative rainfall average
+Print number of year and total months
+Print total inches of rainfall
+Print average rainfall per month for time span
+
+Source code:
+years = int(input ("How many years: "))
+months = 12
+total_rainfall = 0
+
+for year in range(years):
+    for month in range(months):
+        m = float(input("inches of rain: "))
+        total_rainfall += m
+cumaverage = total_rainfall / (years * months)
+
+print ("Total months: ", months * years)
+print ("total inches of rainfall: ",total_rainfall)
+print (f"Average rainfall was {cumaverage} inches of rain over a {months * years} period")
+
+
+Pseudocode:
+Create program to assign point values to amount of books bought per month
+First establish loop for book count
+Second assign point range
+Within second loop allow for month to be input
+Calculate total point value based on number of books purchased by student in a given month
+
+Source code:
+books_bought = int(input("How many books bought?: "))
+book_point_mapping = {0:0, 2:5, 4:15, 6:30}
+
+if books_bought >= 8:
+    print ("You scored 60 points!")
+    
+elif books_bought < 8 and books_bought % 2 == 0:
+    if books_bought in book_point_mapping:
+        print (f"You scored {book_point_mapping[books_bought]} points.")
+    else:
+        print ("You didn't score any points.")
+
